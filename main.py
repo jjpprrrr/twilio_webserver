@@ -52,16 +52,10 @@ def hello_monkey():
 
     if cmd == 'hello' or cmd == 'hi':
         message = 'Hello ' + from_person + '! '
-        message += 'For instructions, reply HELP.'
-    elif cmd == 'help':
-        message = """
-        'list' will list out all items in the fridge. Use 'find <item>' to
-        look for the number of a specific item. 'nutrition <item>' will provide
-        you with detailed nutrition facts. 'expiration <item>' can automatically
-        calculate which one is expiring and which one has expired. 'expiration <category>'
-        would also work. 'recipe <item1> <item2> ...' will give you a link
-        to useful recipes.
-        """
+        message += 'For instructions, reply INST.'
+    elif cmd == 'inst':
+        message = "'list' will list out all items in the fridge. Use 'find <item>' to look for the number of a specific item. 'nutrition <item>' will provide you with detailed nutrition facts. 'expiration <item>' can automatically calculate which one is expiring and which one has expired. 'expiration <category>' would also work. 'recipe <item1> <item2> ...' will give you a link to useful recipes."
+
     elif cmd == 'list':
         message = list_stock()
     elif len(body_list) <= 1:
