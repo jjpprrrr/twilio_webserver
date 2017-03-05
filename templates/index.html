@@ -1,0 +1,13 @@
+<h1>Testing posted images</h1>
+
+<br>
+
+<html>
+  <body>
+    {% for i in range(length) %}
+      <img src="{{image_entities[i]['image_public_url']}}" height=200>
+      <br/>
+      <p>{{keywords[i]['keywords']}}</p>
+    {% endfor %}
+  </body>
+</html>
